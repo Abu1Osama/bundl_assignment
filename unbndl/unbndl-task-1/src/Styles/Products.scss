@@ -1,0 +1,115 @@
+#offer.offer {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 80%;
+  justify-content: space-between;
+  gap: 50px 10px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+
+  .card_offer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 6px;
+    text-align: center;
+
+    h3 {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .brand_image {
+      display: flex;
+      justify-content: center;
+      border: 1px solid rgb(200, 200, 200);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      img {
+        height: 250px;
+        object-fit: cover;
+        align-self: center;
+        border-radius: 16px;
+        transition: transform 0.5s;
+      }
+      &:hover img {
+        transform: scale(1.03);
+      }
+    }
+
+    .title {
+      overflow: hidden;
+      font-size: 17px;
+      color: rgb(99, 99, 99);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .addtocart {
+        padding: 15px 20px;
+        background-color: #08255f;
+        background-image: linear-gradient(
+          to right,
+          #487fed 0%,
+          #08255f 51%,
+          #256bf7 100%
+        );
+        background-size: 200% auto;
+        border: none;
+        transition: 0.9s;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: bold;
+        font-size: 16px;
+
+        &:hover {
+          background-position: right center;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+      .disabled {
+        padding: 15px 20px;
+        background-color: #08255f;
+        background-image: linear-gradient(
+          to right,
+          #487fed 0%,
+          #08255f 51%,
+          #256bf7 100%
+        );
+        border: none;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: bold;
+        font-size: 16px;
+        &:hover {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .card_offer:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #offer.offer {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #offer.offer {
+    grid-template-columns: 100%;
+  }
+}
